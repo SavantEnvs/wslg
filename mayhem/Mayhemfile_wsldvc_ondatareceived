@@ -1,0 +1,9 @@
+project: savantenvs/wslg
+target: wsldvc_ondatareceived
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/wsldvc_ondatareceived/testsuite
+cmds:
+  - cmd: /mayhem/out/wsldvc_ondatareceived
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/wslg
+target: rdpapplist_server
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rdpapplist_server/testsuite
+cmds:
+  - cmd: /mayhem/out/rdpapplist_server
+    libfuzzer: true
+    timeout: 5
